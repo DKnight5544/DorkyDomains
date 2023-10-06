@@ -14,7 +14,7 @@ header {
     color: white;
     text-align: left;
     padding: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
     box-sizing: border-box;
     margin-bottom: 0px;
 }
@@ -25,8 +25,9 @@ img {
 }
 
 .company {
-    font-size: 22px;
-    box-sizing: border-box;
+    font-size: 30px;
+    margin:0px;
+    margin-top:-10px;
 }
 
 
