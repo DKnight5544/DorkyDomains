@@ -1,0 +1,91 @@
+
+
+body {
+    /*font-family: 'Patrick Hand', cursive;*/
+    font-family: 'Sriracha', cursive;
+    letter-spacing:2px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+
+img {
+    margin: 0px;
+    width: 75px;
+}
+
+.company {
+    font-size: 25px;
+    box-sizing: border-box;
+}
+
+
+
+.main {
+    width: 95%;
+    max-width: 800px; /* Added max-width for desktop view */
+    margin: 0 auto; /* Center the content horizontally */
+    box-sizing: border-box;
+}
+
+.ad-copy {
+    width: 100%;
+    font-size: 20px; /* Increased the font size for the text block */
+    line-height: 1.6; /* Increased the line height for better readability */
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: left;
+    padding: 20px; /* Added padding to the text block */
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+
+ul {
+    width: 100%;
+    /*list-style: none;*/
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-left:30px;
+}
+
+li {
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+/*    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;*/
+    /*margin-top: 10px;*/
+}
+
+a {
+    color: #007bff;
+}
+
+
+
+@media (max-width: 600px) {
+    /* Mobile-specific styles */
+    body {
+        font-size: 16px; /* Adjust as needed for mobile readability */
+    }
+
+    main {
+        width: 100%; /* Full width on mobile devices */
+    }
+}
