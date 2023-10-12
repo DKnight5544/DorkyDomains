@@ -46,7 +46,7 @@ img {
     border-radius: 5px;
     text-align: left;
     padding: 20px;
-    padding-top: 3px;
+    /*padding-top: 3px;*/
     box-sizing: border-box;
     margin-top: 20px;
 }
@@ -74,15 +74,11 @@ a, b {
     color: #007bff;
 }
 
-
-
-@media (max-width: 600px) {
-    /* Mobile-specific styles */
-    body {
-        font-size: 16px; /* Adjust as needed for mobile readability */
-    }
-
-    main {
-        width: 100%; /* Full width on mobile devices */
-    }
+.email-address{
+    color:black;
+    font-weight:bold;
+}
+.email-address:hover{
+    cursor:pointer;
+    color:grey;
 }
