@@ -12,83 +12,27 @@
 
     <title>Dorky Domains</title>
 
-    <script>
-
-        function begin() {
-
-            let referrer = getQueryStringValue();
-            const mainContainer = document.getElementById("mainContainer");
-
-            if (referrer == "") referrer = "Nobody";
-
-
-            mainContainer.innerHTML = mainContainer.innerHTML.replace(/\{0\}/g, referrer);
-
-            //const bannerText = document.getElementById("BannerText");
-            //const dorkyDomainsLink = document.getElementById("dorkyDomainsLink");
-            //subDomainName = (subDomainName == "") ? "Speedy" : subDomainName;
-            //bannerText.innerHTML = subDomainName + domainName;
-            //let original = dorkyDomainsLink.href.replace("{0}", subDomainName);
-            //dorkyDomainsLink.href = original;
-
-            //fitTextToContainer(bannerText, bannerText.innerHTML);
-
-        }
-
-
-
-
-        function getQueryStringValue() {
-            // Create a URL object from the input URL string
-            let cleanURL = window.location.href.replace(/(\?|&)fbclid=[^&]+/g, '');
-            const urlObject = new URL(cleanURL);
-
-            // Get the query string from the URL
-            const queryString = urlObject.search;
-
-            // Remove the leading "?" from the query string
-            const query = queryString.slice(1);
-
-            return query;
-        }
-
-        function fitTextToContainer(container, text) {
-            const maxFontSize = 40;
-            const minFontSize = 10;
-            let fontSize = maxFontSize;
-
-            container.style.fontSize = `${fontSize}px`;
-            container.textContent = text;
-
-            while (container.scrollWidth > container.clientWidth && fontSize > minFontSize) {
-                fontSize--;
-                container.style.fontSize = `${fontSize}px`;
-            }
-        }
-
-
-    </script>
 
 </head>
 
-<body onload="begin();">
+<body>
 
 
     <div class="main" id="mainContainer">
         <img src="img_DorkyDomains3.png" />
         <img src="img_ChubbyClick.png" />
         <img src="img_ClickenSoup.png" />
-        <div class="temp">ClickShamer.com</div>
-        <div class="temp">ClickShaming.com</div>
-        <div class="temp">Clictionary.com</div>
-        <div class="temp">Clikazon.com</div>
-        <div class="temp">ClikWorthy.com</div>
-        <div class="temp">FiveOClick.com</div>
-        <div class="temp">MethMom.com</div>
-        <div class="temp">MostlySpam.com</div>
-        <div class="temp">ShitKlicker.com</div>
-        <div class="temp">ShrinkyLink.com</div>
-        <div class="temp"></div>
+        <img src="img_Clictionary.png" />
+        <img src="img_Clikazon.png" />
+        <img src="img_ClikWorthy.png" />
+        <img src="img_fiveoclick.png" />
+        <img src="img_fiveoclick2.png" />
+        <!--<div class="temp">FiveOClick.com</div>
+    <div class="temp">MethMom.com</div>
+    <div class="temp">MostlySpam.com</div>
+    <div class="temp">ShitKlicker.com</div>
+    <div class="temp">ShrinkyLink.com</div>
+    <div class="temp"></div>-->
 
         <div class="ad-copy">
             <p>
