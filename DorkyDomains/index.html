@@ -16,10 +16,13 @@
 
         function begin() {
 
-            const referrer = document.referrer;
-            const refBy = document.getElementById("refBy");
+            let referrer = getQueryStringValue();
+            const mainContainer = document.getElementById("mainContainer");
 
-            refBy.innerHTML = (referrer == "") ? "David.Knight" : referrer;
+            if (referrer == "") referrer = "Nobody";
+
+
+            mainContainer.innerHTML = mainContainer.innerHTML.replace(/\{0\}/g, referrer);
 
             //const bannerText = document.getElementById("BannerText");
             //const dorkyDomainsLink = document.getElementById("dorkyDomainsLink");
@@ -37,7 +40,8 @@
 
         function getQueryStringValue() {
             // Create a URL object from the input URL string
-            const urlObject = new URL(window.location.href);
+            let cleanURL = window.location.href.replace(/(\?|&)fbclid=[^&]+/g, '');
+            const urlObject = new URL(cleanURL);
 
             // Get the query string from the URL
             const queryString = urlObject.search;
@@ -70,7 +74,7 @@
 <body onload="begin();">
 
 
-    <div class="main">
+    <div class="main" id="mainContainer">
 
         <header>
             <img src="Shocked.png" />
@@ -94,7 +98,7 @@
                 <li>Clikoris.com</li>
                 <li>ClikWorthy.com</li>
                 <li>DorkyDomains</li>
-                <li>FiveOclick.com</li>
+                <li>FiveOClick.com</li>
                 <li>MethMom.com</li>
                 <li>MostlySpam.com</li>
                 <li>ShitKlicker.com <red>(new)</red></li>
@@ -102,91 +106,39 @@
             </ul>
         </div>
 
-        <span id="refBy"></span>
-
         <div class="ad-copy">
             <p>
                 <b>
-                    Get your own subdomain!
+                    Cash In on My Referral Program...
                 </b>
             </p>
+            <p></p>
             <p>
-                Here are some working examples...
-            </p>
-            <ul>
-                <li>
-                    <a href="http://d2d.shrinkylink.com" target="_blank" title="Game: Dot To Dots">
-                        <span style="color:red">d2d.</span>shrinkylink.com
-                    </a>
-                </li>
-                <li>
-                    <a href="http://ssp.shrinkylink.com" target="_blank" title="Sudoku Solver Pro">
-                        <span style="color:red">ssp.</span>shrinkylink.com
-                    </a>
-                </li>
-                <li>
-                    <a href="https://slider.clikazon.com" target="_blank" title="A 5x5 Slider Puzzle">
-                        <span style="color:red">slider.</span>clikazon.com
-                    </a>
-                </li>
-                <li>
-                    <a href="http://fb.dorkydomains.com" target="_blank" title="Dorky Domains Facebook Group">
-                        <span style="color:red">fb.</span>dorkydomains.com
-                    </a>
-                </li>
-                <li>
-                    <a href="http://quilts.clikazon.com" target="_blank" title="Quilts For Sale - by Jolene!">
-                        <span style="color:red">quilts.</span>clikazon.com
-                    </a>
-                </li>
-                <li>
-                    <a href="http://tugtoner.clikazon.com" target="_blank" title="Funniest Skit Ever">
-                        <span style="color:red">tugtoner.</span>clikazon.com
-                    </a>
-                </li>
-            </ul>
-            <p>
-                Your subdomain can be used as a shortcut to anywhere
-                on the internet or I can offer you....
-            </p>
-        </div>
-        <div class="ad-copy">
-            <p>
-                <b>
-                    Website Hosting!
-                </b>
+                Get your own hilarious subdomain and landing page, aka the "package,"
+                for only $100!
             </p>
             <p>
-                I can host your static content right here on
-                one of my dorky domains. I can even help you
-                develop your content!
+                Your package is bursting with humor and designed to drive visitors to this page.
+            </p>
+            <p>
+                Use your cell phone to share your package with others to generate new sales!
+            </p>
+            <p>
+                Your first two (2) sales will be "rolled up" to the
+                person who was paid for your sale.  It's a good thing.
+            </p>
+            <p>
+                Starting with your 3rd sale, you will receive a fat $50 each!
+            </p>
+            <p>
+                And, because of roll-up, each $50 payment you receive can result in
+                two more! This is mind-boggling.
             </p>
         </div>
 
-        <div class="ad-copy">
-            <p><b>Custom Email Address!</b></p>
-            <p>
-                I can even set you up with a
-                custom email address at any of my dorky domains.
-            </p>
-            <p>
-                I constantly get
-                chuckles and compliments when
-                I give folks my email address:
-            </p>
-            <p>
-                <b>dave@mostlyspam.com</b>
-            </p>
-            <p>
-                Contact me, to chat about your next project!
-            </p>
-        </div>
-
-        <div class="ad-copy" style="background-color:pink; font-weight:bold;">
-            <p>
-
-                If DorkyDomains.com made you chuckle, please share!
-            </p>
+        <div class="ad-copy" style="background-color:pink;">
+            Are you ready to start?  Simply text "{0}" to 503-975-5544 to get the 
+            conversation going! 
         </div>
 
     </div>
