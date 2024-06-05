@@ -6,37 +6,46 @@ body {
     margin: 0;
     padding: 0;
     padding-bottom:20px;
+    background-color:black;
 }
 
-header {
+.main {
     width: 100%;
-    background-color: #007bff;
-    text-align: left;
-    padding: 10px;
-    padding-left: 20px;
+    margin: 0 auto; /* Center the content horizontally */
     box-sizing: border-box;
-    margin-bottom: 0px;
 }
 
 img {
-    margin: 0px;
-    width: 75px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 100%;
 }
 
-.company {
-    font-size: 25px;
-    margin:0px;
-    margin-top:5px;
-    color: white;
-}
-
-
-
-.main {
-    width: 95%;
-    max-width: 800px; /* Added max-width for desktop view */
-    margin: 0 auto; /* Center the content horizontally */
+.temp {
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 220px;
+    padding-top: 150px;
+    padding-bottom: 0px;
+    background-color: #007bff;
+    background-image: url(preview.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
     box-sizing: border-box;
+    color: white;
+    font-size: 40px;
+    font-weight:bold;
+}
+
+.text {
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    padding-left:220px;
+    box-sizing: border-box;
+
+    /*opacity:.7;*/
 }
 
 .ad-copy {
@@ -47,43 +56,20 @@ img {
     border-radius: 5px;
     text-align: left;
     padding: 20px;
-    /*padding-top: 3px;*/
     box-sizing: border-box;
     margin-top: 20px;
 }
 
-
-ul {
-    width: 100%;
-    padding-left: 0px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    margin-top: 0;
-    margin-left:30px;
-}
-
-li {
-    font-size: 20px;
-    font-weight: normal;
-    text-align: left;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-
-a, b {
-    color: #007bff;
-}
-
-.email-address{
-    color:black;
-    font-weight:bold;
-}
-.email-address:hover{
-    cursor:pointer;
-    color:grey;
-}
-
 red{
     color:red;
+}
+
+/* Styles for screens that are at least 800px wide */
+@media screen and (min-width: 1024px) {
+
+    .main {
+        width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
