@@ -27,14 +27,9 @@ img {
 
 .ad-copy {
     width: 100%;
-
-    background-image: url("img_CashApp.jpg");
-    background-position:top center;
-    background-repeat:no-repeat;
-    background-size:cover;
-    padding:5px;
-    box-sizing:border-box;
-
+    padding: 5px;
+    box-sizing: border-box;
+    animation: bgFade 30s infinite;
 }
 
 p{
@@ -50,8 +45,20 @@ p{
     margin-top: 20px;
 }
 
-red{
-    color:red;
+
+
+@keyframes bgFade {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: white;
+    }
 }
 
 /* Styles for screens that are at least 800px wide */
