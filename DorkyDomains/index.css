@@ -27,10 +27,23 @@ img {
 
 .ad-copy {
     width: 100%;
+
+    background-image: url("img_CashApp.jpg");
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding:5px;
+    box-sizing:border-box;
+
+}
+
+p{
     font-size: 20px;
     line-height: 1.6;
-    background-color: #f2f2f2;
-    border-radius: 5px;
+    background-color: white;
+    color:black;
+    opacity:.7;
+    border-radius: 20px;
     text-align: left;
     padding: 20px;
     box-sizing: border-box;
