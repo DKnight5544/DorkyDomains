@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Dave's Dorky Domains">
     <meta property="og:description" content="Domain Names for Attention Seekers.">
-    <meta property="og:image" content="https://www.DorkyDomains.com/preview.png">
+    <meta property="og:image" content="https://www.DorkyDomains.com/DavesDorkyDomains.png">
     <meta property="og:url" content="https://www.DorkyDomains.com/index.html">
     <!--<link rel="stylesheet" href="/index.css">-->
     <title>Dorky Domains</title>
@@ -22,6 +23,7 @@
 
         .main {
             width: 100%;
+            max-width:1024px;
             margin: 0 auto;
             box-sizing: border-box;
         }
@@ -42,26 +44,13 @@
             border-radius: 25px;
             padding: 10px;
             padding-left: 25px;
+            padding-right: 25px;
             font-size: 25px;
             box-sizing: border-box;
             background-color: #4f84bd;
             color: white;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
             /* Horizontal offset, vertical offset, blur radius, color */
-        }
-
-        .red{
-            background-color:red;
-        }
-
-
-        p {
-            margin-top: 30px;
-            font-size: 30px;
-            line-height: 1.6;
-            color: darkblue;
-            padding-left: 40px;
-            box-sizing: border-box;
         }
 
 
@@ -75,13 +64,42 @@
             }
         }
     </style>
+
+    <script>
+
+        let domains;
+        let current = 0;
+
+        function begin() {
+            domains = document.querySelectorAll('.domain');
+            setInterval(cycleDivs, 1500);
+        }
+
+        let index = 0;
+        function cycleDivs() {
+            domains[index].style.backgroundColor = "#4f84bd";
+            index = getRandomInt(0, domains.length - 1);
+            domains[index].style.backgroundColor = "red";
+        };
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+
+    </script>
+
 </head>
 
-<body>
+<body onload="begin();">
+
     <div class="main" id="mainContainer">
 
         <img src="img_DavesDorkyDomains.png" />
-        <div class="domain">CatchClix.com</div>
+
+        <a href="" target="_blank"><div class="domain">CatchClix.com</div></a>
         <div class="domain">ChubbyClick.com</div>
         <div class="domain">CliciClici.com</div>
         <div class="domain">ClickenLittle.com</div>
@@ -89,18 +107,17 @@
         <div class="domain">ClickMydia.com</div>
         <div class="domain">ClickShamer.com</div>
         <div class="domain">Clictionary.com</div>
-        <div class="domain red">Clikazon.com</div>
-        <div class="domain red">Clikernet.com</div>
-        <div class="domain red">Clikoris.com</div>
+        <div class="domain">Clikazon.com</div>
+        <div class="domain">Clikernet.com</div>
+        <div class="domain">Clikoris.com</div>
         <div class="domain">ClickWorthy.com</div>
         <div class="domain">FiveOClock.com</div>
         <div class="domain">MethMom.com</div>
         <div class="domain">MostlySpam.com</div>
-        <div class="domain red">ShitKlicker.com</div>
+        <div class="domain">ShitKlicker.com</div>
         <div class="domain">ShrinkyLink.com</div>
-        <div class="domain red">SlutShuttle.com</div>
-        <div class="domain">Your Content + My Domain = True Love</div>
-        <div class="domain red">971-236-1579</div>
+        <div class="domain">SlutShuttle.com</div>
+        <div class="domain">Just Click One!</div>
     </div>
 </body>
 </html>
